@@ -1,0 +1,30 @@
+<section>
+  <div class="logo">
+    <a routerLink="/index"><img src="../../../assets/img/logo-sem-fundo.png" alt="Logo Aurora"></a>
+    <h1>Aurora Livraria</h1>
+  </div>
+
+  <h1> Login</h1>
+  <form [formGroup]="formLogin" (ngSubmit)="onSubmit()">
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>E-mail</mat-label>
+        <input matInput placeholder="Digite seu e-mail" formControlName="email">
+      </mat-form-field>
+    </div>
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Senha</mat-label>
+        <input type="password" matInput placeholder="Digite sua senha" formControlName="senha">
+      </mat-form-field>
+    </div>
+
+
+    <div (click)="loginGoogle()" class="google-login" (click)="loginGoogle()">
+      <img src="../../../assets/img/logo-google.png" alt=""> <span>Login com o Google</span>
+    </div>
+
+    <button type="submit" [disabled]="!formLogin.valid" mat-flat-button color="primary"> Entrar</button>
+  </form>
+  <span> Não tem uma conta? <a routerLink="/registro">Cadastre-se</a></span>
+</section>

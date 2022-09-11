@@ -1,0 +1,17 @@
+h1 {
+  padding-bottom:0 ;
+  margin-bottom:0;
+}
+
+h3 {
+  font-style: italic;
+}
+
+span {
+  font-weight: bold;
+}
+
+div {
+  padding: 5px;
+}
+

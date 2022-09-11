@@ -1,0 +1,21 @@
+button {
+  margin: 5px;
+}
+
+
+.title {
+  font-size: 1.5em;
+
+}
+
+.searcFrom {
+  max-width: 1000px;
+}
+
+@media(max-width:800px) {
+  .searcFrom, .searcFrom mat-form-field {
+    max-width: 300px;
+  }
+}
+
+

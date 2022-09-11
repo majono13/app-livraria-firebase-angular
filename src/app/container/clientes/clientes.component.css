@@ -1,0 +1,17 @@
+
+.title {
+  font-size: 1.5em;
+
+}
+
+button {
+  margin: 5px;
+}
+
+.favoritos {
+  color: rgb(231, 218, 27);
+  font-size: 1.2em;
+  margin-left: 20px;
+  cursor: pointer;
+}
+

@@ -1,0 +1,27 @@
+
+
+  <div class="button-menu-mobile" (click)="abrirMenu()"><i class=" bi bi-arrow-left-right" ></i></div>
+
+  <div class="menu" >
+    <nav>
+      <mat-list>
+        <mat-list-item (click)="abrirMenu()" routerLink="/produtos" routerLinkActive="linkAtivo">
+          <div mat-line>Produtos</div>
+          <i class="bi bi-folder"></i>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item (click)="abrirMenu()" routerLink="/clientes" routerLinkActive="linkAtivo">
+          <div mat-line>Clientes</div>
+          <i class="bi bi-people-fill"></i>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item class="fechar-menu" (click)="abrirMenu()">
+          <div mat-line>Fechar</div>
+          <i class="bi bi-x-lg"></i>
+        </mat-list-item>
+      </mat-list>
+    </nav>
+
+    </div>

@@ -1,0 +1,67 @@
+<!--Campo pesquisa-->
+<form class="searcFrom">
+  <div>
+    <mat-form-field appearance="outline" style="
+    width: 500px">
+      <mat-label>Pesquisar email do cliente</mat-label>
+      <input matInput placeholder="Faça sua pesquisa..." autocomplete="off" [(ngModel)]="pesquisa" name="pesquisa">
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="pesquisar()">Pesquisar</button>
+    <button mat-flat-button color="warn" (click)="cancelarPesquisa()">Cancelar</button>
+  </div>
+</form>
+<div>
+
+<!--Campo adicionar cliente-->
+<div class="button-add">
+  <button routerLink="/novo_cliente" title="Novo Cliente" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+
+<!--Campo clientes-->
+<div class="container_">
+
+  <div *ngIf="load" class="spinner">
+    <mat-spinner ></mat-spinner>
+  </div>
+
+  <div *ngIf="!pesquisando">
+    <mat-list class="mat-list" *ngIf="!load" >
+      <div class="title" mat-subheader>Clientes</div>
+      <a>
+      <mat-list-item *ngFor="let cliente of clientes, let i=index">
+        <div mat-line>
+          {{cliente.nome}} {{cliente.sobrenome}}
+          <i (click)="attFavoritos(cliente)" title="Adicionar aos favoritos" *ngIf="cliente.favoritos == false" class="favoritos bi bi-star"></i>
+          <i (click)="attFavoritos(cliente)" title="Remover de favoritos" *ngIf="cliente.favoritos == true" class="favoritos bi bi-star-fill"></i>
+        </div>
+
+        <div><i class="bi icons bi-info-circle" (click)="openDialogDetails(cliente)" title="Ver detalhes"></i></div>
+        <div><i class="bi icons bi-pencil" (click)="openDialogEdit(cliente)" title="Editar"></i></div>
+        <div><i (click)="apagar(cliente)" class="bi icons bi-trash3-fill" title="Excluir"></i></div>
+        <mat-divider></mat-divider>
+        </mat-list-item>
+
+      </a>
+    </mat-list>
+  </div>
+
+  <!--Resultado pesquisa-->
+  <div *ngIf="pesquisando">
+    <mat-list *ngFor="let cliente of resultado">
+
+      <mat-list-item role="listitem">
+        <div mat-line>{{cliente.nome}} {{cliente.sobrenome}}</div>
+        <div><i class="bi icons bi-info-circle" (click)="openDialogDetails(cliente)" title="Ver detalhes"></i></div>
+      <div><i class="bi icons bi-pencil" (click)="openDialogEdit(cliente)" title="Editar"></i></div>
+      <div><i (click)="apagar(cliente)" class="bi icons bi-trash3-fill" title="Excluir"></i></div>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+    </mat-list>
+  </div>
+
+  </div>
+
+

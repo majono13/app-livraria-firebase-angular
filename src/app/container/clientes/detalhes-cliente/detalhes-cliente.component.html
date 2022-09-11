@@ -1,0 +1,14 @@
+<div class="detalhes">
+
+  <div class="nome">
+    <h1>
+      {{cliente.nome}} {{cliente.sobrenome}}
+    </h1>
+      <i  title="Remover de favoritos" *ngIf="cliente.favoritos == true" class="favoritos bi bi-star-fill"></i>
+  </div>
+
+  <div class="infoCliente">
+    <div mat-line><span>email:</span> {{cliente.email}}</div>
+    <div mat-line><span>Telefone:</span> {{cliente.telefone}}</div>
+  </div>
+</div>

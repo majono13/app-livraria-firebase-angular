@@ -1,0 +1,23 @@
+
+.button-cancel {
+  display: inline;
+}
+
+mat-form-field {
+  width: 600px;
+}
+
+mat-form-field input{
+  max-width: 100%;
+}
+
+button {
+  margin:20px;
+
+}
+
+@media(max-width:800px) {
+    button {
+      margin: 5px;
+    }
+}

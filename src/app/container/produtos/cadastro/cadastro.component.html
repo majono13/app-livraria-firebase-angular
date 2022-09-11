@@ -1,0 +1,64 @@
+<form [formGroup]="livroForm" (ngSubmit)="submit()" #form="ngForm">
+
+      <div>
+        <mat-form-field appearance="outline">
+            <mat-label>Nome do Produto</mat-label>
+            <input type="text" matInput placeholder="Digite o nome do livro.." formControlName="nome">
+            <mat-error>
+              Campo inválido
+            </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div>
+        <mat-form-field appearance="outline">
+          <mat-label>Nome do autor</mat-label>
+          <input type="text" matInput placeholder="Digite o nome do autor..." formControlName="autor">
+          <mat-error>
+            Campo inválido
+          </mat-error>
+          </mat-form-field>
+      </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+          <mat-label>Preço</mat-label>
+          <input type="number" matInput placeholder="Digite preço do livro.." formControlName="preco">
+          <mat-error>
+            Campo inválido
+          </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Categoria</mat-label>
+        <mat-select formControlName="categoria" >
+          <mat-option *ngFor="let c of categorias" [value]="c" type="text" matInput placeholder="Digite o gênero do livro..." >{{c}}</mat-option>
+        </mat-select>
+
+        <mat-error>
+          Campo inválido
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <div>
+      <mat-form-field appearance="outline">
+        <mat-label>Estoque</mat-label>
+        <input type="number" matInput placeholder="Digite a quantidade de livros no estoque..." formControlName="estoque">
+        <mat-error>
+          Campo inválido
+        </mat-error>
+      </mat-form-field>
+    </div>
+
+    <button mat-flat-button color="primary" type="submit" [disabled]="!livroForm.valid">Salvar</button>
+</form>
+
+<button type="cancel" class="button-cancel" mat-flat-button color="warn" (click)="cancelar()">Cancelar</button>
+
+
+
+
+

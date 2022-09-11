@@ -1,0 +1,33 @@
+
+.infoCliente {
+  margin-top: 50px;
+}
+
+.favoritos {
+  color: rgb(231, 218, 27);
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+.nome {
+  display: flex;
+  text-align: center;
+}
+
+
+h1 {
+  padding-bottom:0 ;
+  margin-bottom:0;
+}
+
+h3 {
+  font-style: italic;
+}
+
+span {
+  font-weight: bold;
+}
+
+div {
+  padding: 5px;
+}

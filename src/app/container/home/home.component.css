@@ -1,0 +1,18 @@
+
+div {
+  margin-top:100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+div img {
+  max-width: 90%;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-family: var(--font-logo);
+  color: var(--cor2)
+}

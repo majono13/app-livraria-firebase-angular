@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;1,100&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat+Brush&display=swap');
+
+@import url('bootstrap-grid.min.css');
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: var(--font);
+
+}
+
+body {
+  background-color: var(--cor3);
+}
+
+
+:root {
+  --cor2: #3C3D32;
+  --cor: rgb(235, 235, 235);
+  --cor3: rgb(243, 243, 243);
+
+  --font: 'Montserrat', sans-serif;
+  --font-logo: 'Caveat Brush', cursive;
+}
+
+.container {
+ margin:0;
+  padding: 0;
+}
+
+.spinner {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
+ }
+
+
+ mat-list .mat-list {
+  margin-top: 2px;
+  padding-top: 20px;
+  font-size: 1.3em;
+}
+
+a {
+  text-decoration: none;
+}
+
+
+.icons {
+  font-size: 1.2em;
+  color: var(--cor2);
+  cursor: pointer;
+  padding: 20px;
+}
+
+.icons:hover {
+  color: rgb(75, 75, 255);
+}
+
+
+.button-add {
+  display: flex;
+  justify-content: end;
+}
+
+mat-form-field {
+  padding-top: 50px;
+  margin-right: 20px;
+
+}
+
+
+
+.resultado {
+  max-width: 500px;
+  padding-left:15px ;
+  opacity: 1;
+}
+
+.resultado p {
+  padding-top: 5px;
+}
+
+
+mat-radio-button  {
+  padding: 10px;
+}
+
+/***** Componente detalhes configurações em comum*****/
+
+.detalhes {
+  width: 500px;
+  height: 200px;
+  font-size: 1.2em;
+  margin-left: 20px;
+}
+
+.edite {
+  width: 600px;
+}
+
+.edite mat-form-field {
+  padding-top: 10px;
+    height: auto;
+  }
+
+@media(max-width:800px) {
+  matf-form-field {
+    max-width: 300px;
+  }
+
+  .searcFrom {
+    width: 300px;
+  }
+
+  .button-add {
+    margin-right: 30px;
+  }
+
+  .detalhes {
+    margin: 5px;
+    max-width: 90%;
+    font-size: 1em;
+    padding-bottom: 20px;
+  }
+
+ .edite mat-form-field {
+    max-width: 250px;
+
+  }
+  .edite {
+    max-width: 100%;
+  }
+
+  .edite button {
+    display: inline-block;
+  }
+
+
+}

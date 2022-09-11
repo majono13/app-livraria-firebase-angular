@@ -1,0 +1,62 @@
+
+<!--Campo pesquisa-->
+<form class="searcFrom">
+  <div>
+    <mat-form-field class="form" appearance="outline" style="
+    width: 500px">
+      <mat-label>Pesquisar nome do produto</mat-label>
+      <input matInput placeholder="Faça sua pesquisa..." autocomplete="off" [(ngModel)]="pesquisa" name="pesquisa">
+    </mat-form-field>
+    <button mat-flat-button color="primary" (click)="pesquisar()">Pesquisar</button>
+    <button mat-flat-button color="warn" (click)="cancelarPesquisa()">Cancelar</button>
+  </div>
+</form>
+
+<!--Campo adicionar produto-->
+<div class="button-add">
+  <button title="Novo Produto" routerLink="/novo_produto" mat-fab color="primary" aria-label="Example icon button with a delete icon">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+
+<!--Campo Produtos-->
+<div class="container_">
+
+  <div *ngIf="load" class="spinner">
+    <mat-spinner ></mat-spinner>
+  </div>
+
+  <div *ngIf="!pesquisando">
+    <mat-list class="mat-list" *ngIf="!load" >
+      <div class="title" mat-subheader>Produtos</div>
+      <a
+      mat-list-item *ngFor="let livro of livros, let i=index">
+        <div mat-line>{{livro.nome}}</div>
+        <div mat-line>{{livro.autor}}</div>
+        <div><i class="bi icons  bi-info-circle" (click)="openDialogDetails(livro)" title="Ver detalhes"></i></div>
+        <div><i class="bi icons bi-pencil" (click)="openDialogEdit(livro)" title="Editar"></i></div>
+        <div><i (click)="delete(livro)" class="bi icons bi-trash3-fill" title="Excluir"></i></div>
+        <mat-divider></mat-divider>
+      </a>
+    </mat-list>
+  </div>
+
+  <!--Resultado pesquisa-->
+  <div *ngIf="pesquisando">
+
+      <mat-list *ngFor="let livro of resultado; let i =index">
+
+        <mat-list-item role="listitem">
+          <div mat-line>{{livro.nome}}</div>
+          <div mat-line>{{livro.autor}}</div>
+          <div><i class="bi icons bi-info-circle" (click)="openDialogDetails(livro)" title="Ver detalhes"></i></div>
+        <div><i class="bi icons bi-pencil" (click)="openDialogEdit(livro)" title="Editar"></i></div>
+        <div><i (click)="delete(livro)" class="bi icons bi-trash3-fill" title="Excluir"></i></div>
+        </mat-list-item>
+        <mat-divider></mat-divider>
+      </mat-list>
+  </div>
+
+  </div>
+

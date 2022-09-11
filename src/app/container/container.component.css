@@ -1,0 +1,12 @@
+.container-fluid, .row {
+    margin:0;
+    padding:0;
+  }
+
+  .col-3, .col-xl-2 {
+    padding: 0;
+  }
+
+  app-footer {
+    padding: 0;
+  }

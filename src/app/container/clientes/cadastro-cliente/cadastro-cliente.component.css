@@ -1,0 +1,29 @@
+input {
+  padding-left: 100px;
+}
+
+mat-form-field {
+  padding-top: 50px;
+  width: 90%;
+  margin-left: 20px;
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+button {
+  margin: 20px
+}
+
+.div-2 mat-form-field {
+  width: 30%;
+}
+
+form {
+  max-width: 1300px;
+  display: inline;
+}
+
+.button-cancel {
+  display: inline;
+}
+

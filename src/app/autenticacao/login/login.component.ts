@@ -31,7 +31,7 @@ export class LoginComponent implements OnInit {
         error: (err) => {
           this.snackBar.open('Falha ao tentar logar', 'Ok', { duration: 2000 });
         },
-        next: () => {
+        complete: () => {
 
           this.router.navigateByUrl('/');
         }

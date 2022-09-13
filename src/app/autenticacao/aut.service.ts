@@ -70,9 +70,6 @@ export class AutService {
         this.router.navigateByUrl('/')
         this.salvaUserDoGoogle(u)
       })
-      .catch((err) => {
-        this.snackBar.open('Falha ao tentar logar', 'Ok', { duration: 3000 });
-      })
   }
 
   salvaUserDoGoogle(u: UserCredential) {

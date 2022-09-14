@@ -18,7 +18,7 @@
 
 <h3 align="center">📁 Acesso ao projeto 👇</h3>
 
-aurora-livraria.firebaseapp.com
+https://aurora-livraria.firebaseapp.com
 
 <h3>✅ Tecnologias Utilizadas</h3>
 
